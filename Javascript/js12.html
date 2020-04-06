@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>understanding the dom</title>
+	<script type="text/javascript" src="dom.js"></script>
+	
+</head>
+<body>
+	<h1 id="title">understanding the dom</h1>
+	<div id="main">
+	<p id="first">this is the first paragraph</p>
+	<p id="second">
+		<strong>second para</strong>
+	</p>
+	<p id="third">third paragraph</p>
+	</div>
+	<div id="form">
+	<input type="submit" id="clickme" value="click"/>
+	<script type="text/javascript">
+	document.getElementById("clickme").onclick= runtheexample;
+</script>
+	<a href="http://www.bing.com" id="anchor">bing</a>
+	</div>
+</body>
+</html>

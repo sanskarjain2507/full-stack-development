@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript  Example</title>
+</head>
+<body>
+	<h1>javascript example</h1>
+	<script>
+	
+	var myresult="";
+	myresult=false?"truty":"falsey";
+	alert(myresult);
+
+	var myresult=typeof 24/"hello";
+	myresult=24/"bob"?"truty":"falsey";
+	alert(myresult);
+	
+	var myresult=(3=="3")?"true":"false";
+	alert(myresult);
+	
+	var username="sanskar";
+	
+	switch(username)
+{
+	case "aditya": {
+			document.write("welcome adibis");
+			break;
+			}
+	case "sanskar": {
+			document.write("welcome samins");
+			break;
+			}
+	default: {
+			document.write("welcome");
+			break;
+			}
+	}
+
+	var rightnow= new Date();
+	var currenthour=rightnow.getHours();
+	switch(true)
+	{
+	case(currenthour>8 && currenthour<12):
+	document.write("morning");
+	break;
+
+	case(currenthour===12):
+	document.write("lunchtime");
+	break;
+	
+        case(currenthour>12 && currenthour<24):
+	document.write("siesta time");
+	break;	
+
+	default:
+	document.write("invalid");
+	break;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

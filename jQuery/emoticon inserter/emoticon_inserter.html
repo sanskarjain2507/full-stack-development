@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dropdown menu</title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.emotion').click(function(){
+			var text_val=jQuery.trim($('#text').val());
+			var icon_val=$(this).attr('value');
+			if(text_val=="")
+				var space='';
+			else
+				space=' ';
+			$('#text').focus().val(jQuery.trim(text_val + space + icon_val + ' '));
+			});
+			$('#send').click(function(){
+				alert('your msg has been sent');
+			
+			});
+			});
+			
+	</script>
+	<style>
+		body{
+			background:lightgreen;
+			padding:200px 470px;
+			font-family:Helvetica, arial ,sans-serif;
+			}
+		img{
+			height:20px;
+			width:20px;
+			padding-left:10px;
+			cursor:pointer;
+			}
+
+		#text{
+			height:90px;
+			width:360px;
+			padding:13px;
+			background:#303538;
+			border:2px solid blue;
+			border-radius:15px;
+			font-size:18px;
+			font-weight:500;
+			color:white;
+			}
+		
+		#text:focus{
+			border-color:red;
+			}
+		#main{
+				background:#e2e2e2;
+				border:1px solid #333;
+				border-radius:15px;
+				width:370px;
+				padding:8px;
+				}
+		
+		</style>
+
+</head>
+<body>
+	<textarea id="text"></textarea>
+	<p id="main">
+		add emoticons:
+			<img src="smile.jpg" class="emotion" value=":D">
+			<img src="cry.jpg" class="emotion" value=":'(">
+			<img src="angry.png" class="emotion" value=":#">
+			<img src="satisfied.jpg" class="emotion" value=":)">
+			<img src="laugh.jpg" class="emotion" value=":B">
+	
+	<input type="button" id="send" value="send">
+	</p>
+
+
+
+</body>
+</html>

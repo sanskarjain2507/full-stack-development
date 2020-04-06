@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+			$('#dialog').hide();
+			$('#btn1').click(function(){
+
+				$('#dialog').dialog({buttons:{'ok':
+					function(){
+			$(this).dialog('close');
+			}
+			},
+				closeOnEscape:true,
+				draggable:false,
+				resizable:false,
+				show:'blind',
+				hide:'explode',
+				modal:true,
+				position: ['left','top']
+			
+			});
+			
+			}); 
+			
+			$('#btn1').button();
+		 
+
+		});
+
+		
+	</script>
+	<style>
+		body{
+			background:red;
+			
+			}
+		.ui-button{
+			background:blue;
+			}
+		.ui-dialog{
+				background:purple;
+			}
+		
+
+
+	</style>
+	
+</head>
+
+<body>
+	<input type="button" value="click me to open dialog" id="btn1"/>
+	<div title="welcome" id="dialog">hello everyone</div>
+</body>
+</html>

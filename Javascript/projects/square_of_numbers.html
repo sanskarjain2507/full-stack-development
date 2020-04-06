@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Table of square of  numbers</title>
+	</head>
+	<body>
+		<h1 align="center">SQUARE TABLE</h1>
+		<br><br>
+		
+		<center><button type="button" id="button">ENTER ANY NUMBER</button>
+		<br><br>
+		
+		<p id="para"></p>
+		</center>
+		<script type="text/javascript">
+		var n,a,b,c,i;
+		var s=0;
+		
+		document.getElementById("button").onclick= function(){
+		n= prompt("enter any number");
+		for(i=1;i<=n;i++)
+		{
+			a=i*i;
+			 s=s+(i+ "*" + i + "=" + a+"<br>");
+			
+		}
+			document.getElementById("para").innerHTML=s;
+}
+		</script>
+		
+		
+	</body>
+</html>

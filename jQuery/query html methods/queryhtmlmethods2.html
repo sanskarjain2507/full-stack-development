@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+		$('#btn1').click(function(){
+			
+
+			$('img').attr('width','500');
+			});
+			
+		$('#btn2').click(function(){
+			
+
+			$('img').prop('width','600');
+			});
+		$('#btn3').click(function(){
+			
+
+			$('img').removeProp('width','600');
+			});
+			
+		$('#btn4').click(function(){
+			
+
+			$('img').removeAttr('width','500');
+			});
+			
+		
+			
+			
+	
+			
+			
+			});
+			
+	</script>
+	
+	
+		
+	
+</head>
+<body>
+
+
+	<button id="btn1">add attribute</button>
+	<button id="btn2">add property</button>
+	<button id="btn3">remove property</button>
+	<button id="btn4">REMOVE ATTRIBUTE</button>
+	
+	<img src="relay.png" alt="" width="300" height="200"> 
+	
+	
+	<div>hi</div>
+
+
+
+</body>
+</html>

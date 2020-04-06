@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+			$('#tab').tabs({
+				event:'mouseover',
+				collapsible:true,
+				active: 2,	
+				disabled:[0,2],
+				show:{effect:'slide',duration:500}	
+				
+			
+			})
+		});
+
+		
+	</script>
+	<style>
+		body{
+			background:red;
+			
+			}
+		
+
+	</style>
+	
+</head>
+
+<body>
+	<div id="tab">
+		<ul>	
+			<li><a href="#design">web designing</a></li>
+			<li><a href="#develop">web developement</a></li>
+			<li><a href="#project">projects</a></li>
+			<li><a href="#contact">contacts</a></li>
+		</ul>
+	<div id="design">
+		<h2>video course</h2>
+		<p>video are available now!!</p>
+	</div>
+
+	<div id="develop">
+		<h2>develope here</h2>
+		<p>all you want</p>
+	
+	</div>
+
+	<div id="project">
+			<h2>projects</h2>
+		<p>html,css,and many more</p>
+	</div>	
+		
+		
+	<div id="contact">
+			<p><img src="logo.jpg"></p>
+	</div>
+	</div>
+</body>
+</html>

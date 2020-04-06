@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	
+<body>
+	<input type="text" id="no" />
+<script>
+	
+	document.getElementById("no").addEventListener("blur",abc);
+	document.getElementById("no").addEventListener("focusin",abc1);
+	function abc()
+		{
+		var a=document.getElementById("no");
+		a.value=a.value.toUpperCase();
+		}
+	function abc1()
+		{
+		window.alert("you have focued in input field");
+		}
+		
+</script>
+	
+</body>
+</html>
+	

@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	
+<body>
+	<input type="text" id="no" onblur="abc1()" />
+<script>
+	document.getElementById("no").addEventListener("focus",abc);
+	
+	function abc()
+		{
+			document.getElementById("no").style.background="pink";
+			document.getElementById("no").style.border="3px solid blue";
+		}
+
+	function abc1()
+		{
+			var a=document.getElementById("no");
+			a.value=a.value.toUpperCase();
+		}
+	
+</script>
+	
+</body>
+</html>
+	

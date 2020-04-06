@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Some form tags</title>
+	</head>
+	<body>
+
+        <h1 align="center"><u>EXPERIMENT 4: FORM ELEMENTS</u></h1><br><br>
+<form>
+	<h4>You can only read this textbox but not make changes in it</h4>
+	<input type="text" value="No changes"readonly>
+	<h4>To input date with maximum and minimum value</h4>
+<input type="date" min="1998-07-25" max="2018-07-25"><br><br>
+	<h4> To make text area to input text of specific rows and columns which is focused by default</h4>
+	<textarea cols="30" rows="3" autofocus></textarea>
+	<h4>To make checkbox checked by default</h4>
+	<input type="checkbox" checked>
+	<h4>To input time </h4>
+<input type="time"><br>
+<br>
+	<h4>To input time and date of system</h4> 
+<input type="datetime-local"><br><br>
+	<h4>This textbox verify text entered is email or not</h4>
+<input type="email" placeholder="@gmail.com"><br><br>
+	<h4>This textfield only take number as a input and <b>it is required field</b></h4>
+<input type="number" required><br>
+<br>
+	<h4>This will take range of value as input with minimum and maximum values</h4>
+<input type="range" min="5" max="50"><br><br>
+	<h4>In this list you can also enter any data apart from listitems</h4>
+<input list="gender" name="gender"><br><br>
+<datalist id="gender">
+<option value="male">
+<option value="female">
+<option value="others">
+</datalist>
+	<h4>You can choose any file in your system from here</h4>
+<input type="file">
+	<h4>This textbox only take telephone number as input</h4>
+<input type="tel">(for telephone number)
+	<h4>In this COD is disabled and credit card is selected by default and display only 2 listitems at a time</h4>
+	Payment options:<select size="2" >
+						<option>branch</option>
+						<option disabled>COD</option>
+						<option selected>credit card</option>
+						<option>debit card</option>
+						<option>net banking</option>
+						<option>UPI</option><br><br>
+</select><br><br>
+
+
+</form>
+
+
+
+
+	</body>
+</html>

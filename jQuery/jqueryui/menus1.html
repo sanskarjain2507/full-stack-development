@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+			$('#dmenu').menu({
+			icons:{submenu:'ui-icon-circle-arrow-e'}
+				});
+		});
+
+		
+	</script>
+	<style>
+		body{
+			background:red;
+			
+			}
+		.ui-menu{
+				width:300px;
+				
+			}
+		.ui-menu-item:hover{
+
+			background:green;
+				color:#fff;
+				}
+		
+
+	</style>
+	
+</head>
+
+<body>
+	<ul id="dmenu">
+		<li class="ui-widget-header">courses</li>
+			<li>web designing
+				<ul>
+					<li>html</li>
+					<li>css</li>
+					<li>jquery</li>
+					<li>bootstrap</li>
+				</ul></li>
+				<div id="ui-menu-divider"></div>
+			<li  class="ui-state-disabled">web developement
+				<ul>
+					<li>mysql</li>
+					<li>php
+				<ul>
+					<li>joomla</li>
+					<li>SQL</li>
+					
+				</ul></li>
+					<li>java</li>
+					<li>ML</li>
+				</ul></li>
+			<li>projects
+				<ul>
+					<li>html</li>
+					<li>css</li>
+					<li>jquery</li>
+					<li>bootstrap</li>
+				</ul></li>
+			<li>tips</li>
+	</ul>
+</body>
+</html>

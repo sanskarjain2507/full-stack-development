@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+		$('#btn').click(function(){
+			if($('li').parent().is('ul'))
+				alert('parent of li is ul');
+			});
+		
+			});
+			
+	</script>
+	<style>
+		.descandant *{
+				
+				display:block;
+				border:1px solid magenta;
+				color:blue;
+				padding:5px;
+				margin:15px;
+				}
+	
+	</style>
+	
+</head>
+<body class="descandant">body(great grandparent)
+
+<button id="btn">is parent</button>
+
+
+<div style="width:500px;">div(grand parent)
+	<ul>ul(direct parent)
+		<li>li(child)
+			<span>span(grandchild)</span> // not asibling of below span
+		</li>
+		<li class="new">li(child)
+			<span>span(grandchild)</span>
+		</li>
+		<li>li(child)
+			<span>span(grandchild)</span>
+		</li>
+		<li class="new1">li(child)
+			<span>span(grandchild)</span>
+		</li>
+	</ul>
+	<ul></ul>
+</div> 
+	
+
+
+
+
+</body>
+</html>

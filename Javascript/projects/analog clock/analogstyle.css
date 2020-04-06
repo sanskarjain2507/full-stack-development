@@ -1,0 +1,32 @@
+body {
+	margin:0;
+	background-color:red;
+	
+ }
+
+#clock-container {
+
+	width:40%;
+	margin:50px 0 0 410px;
+	vertical-align:middle;
+	overflow:hidden;
+
+}
+
+#face {
+	stroke-width:2px;
+	stroke:#8b4513;
+	
+	}
+
+#hour,#min {
+		stroke-width:1px;
+		fill:#333;
+		stroke:#555;
+}
+
+#sec{
+	stroke-width:1px;
+		fill:#333;
+		stroke:red;
+	}

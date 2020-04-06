@@ -1,0 +1,45 @@
+<html>
+	<head>
+	<title></title>
+	
+	</head>
+	<body>
+	<script type="text/javascript">
+		window.location.hash="part2";
+		document.write(window.location.hash+"<br>");
+		document.write(window.location.host+"<br>");
+		document.write(window.location.hostname+"<br>");
+		document.write(window.location.href+"<br>");
+		document.write(window.location.origin+"<br>");
+		document.write(window.location.pathname+"<br>");
+		document.write(window.location.port+"<br>");
+		document.write(window.location.protocol+"<br>");
+		window.location.search="sanskar";
+		document.write(window.location.search+"<br>");
+
+		function abc() {
+
+			window.location.assign("http://google.com");
+		}
+	
+		
+		function abc1() {
+
+			window.location.reload();
+		}
+
+		function abc2() {
+
+			window.location.replace("historyobject.html");
+		}
+
+
+	</script>
+	<br>
+	
+	<button onclick="abc();">google</button>
+	<button onclick="abc1();">reload</button>
+	<button onclick="abc2();">history.html</button>
+	<p id="cde"></p>
+	</body>
+</html>

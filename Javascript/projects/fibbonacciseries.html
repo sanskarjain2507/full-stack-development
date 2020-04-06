@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Fibbonacci numbers</title>
+	</head>
+	<body>
+		<h1 align="center">FIBBONACCI SERIES</h1>
+		<br><br>
+		
+		<center><button type="button" id="button">ENTER ANY NUMBER</button>
+		<br><br>
+		
+		<p id="para"></p>
+		</center>
+		<script type="text/javascript">
+		var n,fib,a=0,b=1,d=0;
+		
+		document.getElementById("button").onclick= function(){n=prompt("enter any number");
+		
+		
+
+		document.write(a+ "  " + b);
+		fibbo()
+	
+		function fibbo()
+		{
+		   for(i=1;i<=(n-2);i++)
+		   {
+			c=a+b;
+			a=b;
+			b=c;
+			document.write(c+"  ");
+			}
+		}
+			
+		}
+	
+		</script>
+		
+		
+	</body>
+</html>

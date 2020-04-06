@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Simple calculator</title>
+	</head>
+	<body>
+	<h1 align="center">SIMPLE CALCULATOR</h1><br><br>
+	<center>
+	<form>
+	Enter first input<input type="text" id="textbox"><br><br>
+	Enter second input<input type="text" id="textbox1"><br><br>
+	<button type="button" id="b1">ADD</button>
+	<button type="button" id="b2">SUBTRACT</button>
+	<button type="button" id="b3">MULTIPLY</button>
+	<button type="button" id="b4">DIVIDE</button><br><br>
+	RESULT:<input type="text" id="textbox2"><br><br>	
+	</form>
+	</center>	
+	
+	<script type="text/javascript">
+	document.getElementById("b1").onclick=function(){
+			var text=parseInt(document.getElementById("textbox").value);	
+			var text1=parseInt(document.getElementById("textbox1").value);
+			var c=text+text1;
+			document.getElementById("textbox2").value =c;
+			}
+
+	document.getElementById("b2").onclick=function(){
+			var text=parseInt(document.getElementById("textbox").value);	
+			var text1=parseInt(document.getElementById("textbox1").value);
+			var c=text-text1;
+			document.getElementById("textbox2").value =c;
+			}
+
+	document.getElementById("b3").onclick=function(){
+			var text=parseInt(document.getElementById("textbox").value);	
+			var text1=parseInt(document.getElementById("textbox1").value);
+			var c=text*text1;
+			document.getElementById("textbox2").value =c;
+			}
+
+	document.getElementById("b4").onclick=function(){
+			var text=parseInt(document.getElementById("textbox").value);	
+			var text1=parseInt(document.getElementById("textbox1").value);
+			var c=text/text1;
+			document.getElementById("textbox2").value =c;
+			}		
+			
+	</script>
+
+	
+	</body>
+</html>

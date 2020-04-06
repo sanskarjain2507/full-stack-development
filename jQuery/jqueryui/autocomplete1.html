@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		var crs=[
+				{value:"html",label:"free course html on w3school"},
+				{value:"css",label:"free course css on w3school"},
+				{value:"javacsript",label:"free course js on w3school"},
+				{value:"php",label:"free course php on w3school"}
+		
+			];
+		$(document).ready(function(){
+			$('#course').autocomplete({source: crs,
+				select:function(event,ui){
+				event.preventDefault();
+				$(this).val(ui.item.label);
+				$('#value').val(ui.item.value);
+
+				}
+			});
+			
+		 
+
+		});
+
+		
+	</script>
+	<style>
+		body{
+			background:red;
+			
+			}
+
+	input{
+		height:30px;
+	
+		}
+
+	</style>
+	
+</head>
+
+<body>
+	course:<input type="text" id="course" size=50><br><br>
+	value:<input type="text" id="value">
+</body>
+</html>

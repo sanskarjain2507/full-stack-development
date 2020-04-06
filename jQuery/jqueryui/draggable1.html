@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+			$('#drag').draggable({
+				cursor:'pointer',
+				axis:'x',
+				scroll:false,
+				containment:'document',   // or we can write containment:[0,0,300,300]  //[x1,y1,x2,y2] x1,x2:initial positions
+				opacity:0.5,
+				grid:[30,30],
+				revert:true,
+				revertDuration:4000,
+				start:function(){
+					$('#text').text('dragging started');
+				},
+				drag:function(){
+					$('#text').text('dragging');
+					
+					},
+					stop:function(){
+					$('#text').text('dragging stop');
+				}
+			});
+			
+				
+		});
+
+		
+	</script>
+	<style>
+			
+		body{
+			background:red;
+			
+			}
+		img{
+			height:80px;
+			width:320px;
+			}
+		
+		
+		
+
+	</style>
+	
+</head>
+
+<body>
+	<img src="logo.jpg" alt="" id="drag">
+		<p id="text"></p>
+
+</body>
+</html>

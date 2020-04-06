@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title></title>
+
+	<script type="text/javascript">
+	
+	var reg=new RegExp();
+	reg=/^[0-9+]{10}$/
+	function phone_validation(phone) {
+			var ok=reg.exec(phone.value);
+			if(!ok){
+				window.alert("invalid phne number");
+				}
+			else
+			window.alert("valid phone number")
+		}
+	
+	document.write(result);
+	
+
+	
+	
+</script>
+	</head>
+	
+<body>
+	<p>enter phone number and press enter.</p>
+	<form>
+	<input type="text" onchange="phone_validation(this);">
+	</form>
+
+	
+	<p id="no"></p>
+
+	
+</body>
+</html>
+	

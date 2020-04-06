@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+		$('button').click(function(){
+			$('#p1').css('background','blue');
+			$('div').css({'color':'red','background-color':'blue','border':'1px solid red'});
+			$('#p2').css('border-width',function(){
+				return 30;
+		
+			});
+		});
+			});
+			
+	</script>
+	
+	
+		
+	
+</head>
+<body>
+
+
+	<button id="start">click</button>
+	<p id="p1">hello</p>
+	<p id="p2" style="border:1px solid green">hello</p>
+	<div>hi</div>
+
+
+
+</body>
+</html>

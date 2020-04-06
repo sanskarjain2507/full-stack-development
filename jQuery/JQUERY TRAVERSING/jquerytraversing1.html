@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		$('button').click(function(){
+			$('span').parent().css({'color':'red','border':'1px solid green'})
+			});
+		$('#btn').click(function(){
+			$('span').parents().css({'color':'red','border':'1px solid green'})
+			});
+		$('#btn1').click(function(){
+			$('span').parentsUntil('div').css({'color':'red','border':'1px solid green'})
+			});
+			});
+			
+	</script>
+	<style>
+		.ancestor *{
+				
+				display:block;
+				border:1px solid magenta;
+				color:blue;
+				padding:5px;
+				margin:15px;
+				}
+	
+	</style>
+	
+</head>
+<body>
+<button>parent</button>
+<button id="btn">parents</button>
+<button id="btn1">parentsUntil</button>
+
+<div class="ancestor">
+	<div style="width:500px;">div (great grand parent)
+	<ul>ul(grand parent)
+		<li>li(parent)
+			<span>span</span>
+		</li>
+	</ul>
+	</div>
+</div>
+	
+
+
+
+
+</body>
+</html>

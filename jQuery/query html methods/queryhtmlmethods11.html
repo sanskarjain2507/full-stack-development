@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+		$('#btn1').click(function(){
+		
+		$('div').scrollTop(100);
+			
+			});
+			
+		$('#btn2').click(function(){
+		
+			alert($('div').scrollTop()+'px')	
+			});
+		
+			});
+			
+	</script>
+	
+	
+	<style>
+		div{
+			width:50px;
+			height:100px;
+			background-color:navy;
+			border:2px solid green;
+			border-radius:10px;
+			padding:10px;
+			overflow:auto;
+			}
+	</style>
+	
+</head>
+<body>
+
+
+	<button id="btn1">click</button><br>
+	<button id="btn2">click</button><br>
+	<button id="btn3">click</button><br>
+	
+	<p>hello</p>
+	
+	<div>hi everyone hi everyone hi everyone hi everyone hi everyone
+	hieveryonehieveryone hi everyone hi everyone hi everyone hi everyone
+	hi everyone hi everyone hi everyone
+	hi everyone hi everyone hi everyone hi everyone hi everyone hi everyone
+	hi everyone hi everyone hi everyone
+	hi everyone hi everyone hi everyone hi everyone hi everyone hi everyone
+	hi everyone hi everyone hi everyone</div>
+	
+
+
+
+
+</body>
+</html>

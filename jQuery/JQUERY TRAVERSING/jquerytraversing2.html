@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+		$('#btn').click(function(){
+		var a=	$('span').parents().map(function(){
+				return this.tagName;
+			}).get().join(', ');
+			$('span').after('<h3>'+a+'</h3>');
+			});
+		
+			});
+			
+	</script>
+	<style>
+		.ancestor *{
+				
+				display:block;
+				border:1px solid magenta;
+				color:blue;
+				padding:5px;
+				margin:15px;
+				}
+	
+	</style>
+	
+</head>
+<body>
+
+<button id="btn">click</button>
+
+<div>
+<p>
+<span>i am span and my ancestors are:</span>
+</p>
+</div> 
+	
+
+
+
+
+</body>
+</html>

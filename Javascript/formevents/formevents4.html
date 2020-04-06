@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	
+<body>
+	<input type="text" id="no" onfocus="abc(this)" />
+<script>
+	document.getElementById("no").addEventListener("focus",abc);
+	
+	function abc()
+		{
+			document.getElementById("no").style.background="pink";
+			document.getElementById("no").style.border="3px solid blue";
+		}
+	
+</script>
+	
+</body>
+</html>
+	

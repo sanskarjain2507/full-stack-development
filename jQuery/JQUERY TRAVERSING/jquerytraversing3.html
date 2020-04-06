@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+		$('#btn').click(function(){
+			$('ul').children('li').css({'color':'purple','border':'2px solid green'})
+			});
+		$('#btn1').click(function(){
+			$('ul').find('span').css({'color':'purple','border':'2px solid green'})
+			});
+			});
+			
+	</script>
+	<style>
+		.descandant *{
+				
+				display:block;
+				border:1px solid magenta;
+				color:blue;
+				padding:5px;
+				margin:15px;
+				}
+	
+	</style>
+	
+</head>
+<body class="descandant">body(great grandparent)
+
+<button id="btn">chidren</button>
+<button id="btn1">find</button>
+
+<div style="width:500px;">div(grand parent)
+	<ul>ul(direct parent)
+		<li>li(child)
+			<span>span(grandchild)</span>
+		</li>
+		<li>li(child)
+			<span>span(grandchild)</span>
+		</li>
+		<li>li(child)
+			<span>span(grandchild)</span>
+		</li>
+		<li>li(child)
+			<span>span(grandchild)</span>
+		</li>
+	</ul>
+
+</div> 
+	
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+				
+				$('#resize').resizable({
+					
+				
+				autoHide:true,
+				animate:true,
+				ghost:true,
+				animateDuration:400,
+				animateEasing:'linear',
+				aspectRatio:true,  // or :0.30 
+				handles:'e,n',    //e stands for east n for north
+				grid:[50,50],
+				maxHeight:700
+
+
+				
+
+				});
+				
+		});
+
+		
+	</script>
+	<style>
+			
+		body{
+			background:white;
+			
+			}
+
+		#resize{
+			width:500px;
+			height:400px;
+
+			}
+		img{
+			height:120px;
+			width:460px;
+			}
+		#main{
+			text-align:center;
+			}
+		#parent{
+			height:700;
+			width:800px;
+			background:#d7d7d7;
+			
+			
+			}
+		
+	</style>
+
+</head>
+
+<body>
+	<div id="parent">
+	<div id="resize" class="ui-widget-header">
+		<div id="main">
+		<img src="logo.jpg" alt="" class="ui-widget-content">
+		</div></div>
+	</div>
+	
+
+</body>
+</html>

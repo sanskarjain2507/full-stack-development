@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		$('#start').click(function(){
+		var div=$('div');
+		div.animate({height:300,width:150},2000);
+		div.animate({width:300},2000);
+		
+		div.queue(function(){
+			div.css('background-color','blue');
+			div.dequeue();
+		});
+		div.animate({height:100},2000);
+		div.animate({width:100},2000);
+		$('span').text(div.queue().length);
+
+			});
+		$('#stop').click(function(){
+			$('div').clearQueue();
+			});
+			});
+			
+	</script>
+	
+	
+		<style>
+	.new{
+		width:50px;
+		height:50px;
+		position:absolute;
+		left:10px;
+		top:100px;
+		background:red;
+		
+	
+		}
+		
+	</style>
+	
+</head>
+<body>
+
+
+<p>the length is<span></span></p>
+<p>
+	<button id="start">click to start</button>
+	<button id="stop">click to stop</button>
+</p>
+<div class="new"></div>
+
+</body>
+</html>

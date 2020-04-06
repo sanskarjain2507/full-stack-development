@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<style>
+	img{
+		height:300px;
+		width:300px;
+		border:5px dotted green;
+		}
+	</style>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+		$('.btn1').click(function() {
+		$('img').fadeIn(2000);             
+		
+		});
+	
+		$('.btn2').click(function() {
+		$('img').delay(3000).hide(2000);
+		
+		});
+		
+		$('.btn3').click(function() {
+		$('img').stop().fadeToggle(4000);
+		
+		});
+		
+		$('.btn4').click(function() {
+		$('img').fadeTo(2000,0.1);
+		
+		});
+		
+		$('.btn5').click(function() {
+		$('img').stop();
+		
+		});
+		});
+	</script>
+	
+</head>
+<body>
+<img src="relay.png">
+
+<button class="btn1">click to fadein</button>
+<button class="btn2">click to fadeout</button>
+<button class="btn3">click to fadetoggle</button>
+<button class="btn4">click to fadeto</button>
+<button class="btn5">click to stop</button>
+</body>
+</html>

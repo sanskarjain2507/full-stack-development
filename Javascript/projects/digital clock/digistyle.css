@@ -1,0 +1,41 @@
+body{
+	background: #a2a2a2;
+	
+	
+	}
+
+#clockdate{
+	margin:auto;
+	width:47%;
+	background-color:#333;
+	cursor:default;
+	border-radius:15px;
+
+
+	}
+
+#clock-large{
+		font-family:"arial",sans-serif;
+		font-size:80px;
+		color:#fff;
+	
+}
+
+#wrapper-clock{
+		padding:25px;
+		text-align:center;
+		margin-top:15px;
+		border-radius:15px;
+	
+
+}
+
+span {
+
+	color:#888;
+	font-size:30px;
+	position:relative;
+	top:-27px;
+	left:-10px;
+
+}

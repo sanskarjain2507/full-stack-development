@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<title></title>
+	
+	</head>
+	<body>
+	<script type="text/javascript">
+		document.write("App code name is"+ " " + navigator.appCodeName+"<br>");
+		document.write("App name is"+ " " + navigator.appName+"<br>");
+		document.write("App version is"+ " " + navigator.appVersion+"<br>");
+		document.write("user agent is"+ " " + navigator.userAgent+"<br>");
+		document.write("product is"+ " " + navigator.product+"<br>");
+		document.write("online?"+ " " + navigator.online+"<br>");	
+		document.write("browser language is"+ " " + navigator.language+"<br>");
+		document.write("cookie enabled?"+ " " + navigator.cookieEnabled+"<br>");	
+	
+		
+	function abc()
+		{
+		var x=navigator.javaEnabled();
+		document.getElementById("cde").innerHTML=x; 
+		}
+	
+	
+	</script>
+	<button onclick="abc();">click</button>
+	<p id="cde"></p>
+	</body>
+</html>

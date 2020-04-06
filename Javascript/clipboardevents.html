@@ -1,0 +1,41 @@
+<html>
+	<head>
+	<title></title>
+	
+	</head>
+	<body>
+	<script type="text/javascript">
+		function abc() {
+
+				document.getElementById("no").innerHTML="text has been copied";
+			
+		
+				}
+		function abc1() {
+
+				document.getElementById("no").innerHTML="text has been cut";
+			
+		
+				}
+		function abc2() {
+
+				document.getElementById("no").innerHTML="text has been pasted";
+			
+		
+				}
+
+	</script>
+	<br>
+	
+	<input type="text" oncopy="abc();" placeholder="oncopy"/><br>
+	<input type="text" oncut="abc1();" placeholder="oncut"/><br>
+	<input type="text" onpaste="abc2();" placeholder="onpaste"/><br>
+	
+	<p id="no"></p>
+	
+	
+	
+	<p id="sd"></p>
+	<p id="ef"></p>
+	</body>
+</html>

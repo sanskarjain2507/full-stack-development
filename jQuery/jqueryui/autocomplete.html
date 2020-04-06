@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		var crs=['html','html5','css','css3','javascript','jquery','php','sql','bootstrap'];
+		$(document).ready(function(){
+			$('#course').autocomplete({minLength:2,delay:900,source: crs});
+		 
+
+		});
+
+		
+	</script>
+	<style>
+		body{
+			background:red;
+			
+			}
+
+	input{
+		height:30px;
+		}
+
+	</style>
+	
+</head>
+
+<body>
+	course:<input type="text" id="course">
+</body>
+</html>

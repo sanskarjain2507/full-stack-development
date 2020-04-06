@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>quiz system</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    <script type="text/javascript">
+                    $(document).ready(function(){
+                          var n=0,a="",b="",score=0;;
+                            var correct=[];
+			$('#ta4,#ta3,#ta1,#ta2,#ta').val("");
+                        $('.ques,.ans,#btn3,#head2').hide();
+                        $('#btn1').click(function(){
+
+                              n++;
+
+                              var question=$('#ta').val();
+                                $('.ans:last').after('<br id="break1"><div class="ques"><h3>' + ' ' + 'Q'+ n + ' ' +question +'</h3></div>');
+                                  $('.ques:last').after('<br id="break2"><div class="ans"><h3><form id="myform"><input type="radio" class="r1" name="answer'+n+'"  id="r1'+n+' " value="a" ><div  id="r" class="d1'+n+' " ></div><br>  <input type="radio" class="r2"name="answer'+n+'"  id="r2'+n+' " value="b"><div  id="r"class="d2'+n+' "></div><br><input type="radio" class="r3" name="answer'+n+'"  id="r3'+n+' " value="c"><div  id="r" class="d3'+n+' "></div><br><input type="radio" class="r4" name="answer'+n+'" value="d" id="r4'+n+' "><div id="r" class="d4'+n+' "><br></div>  </div> </form></h3></div>');
+
+
+
+
+
+
+                        var answer1=$('#ta1').val();
+				
+				
+                            $(".d1"+n+"").text(answer1);
+
+
+                        var answer2=$('#ta2').val();
+				
+				
+                            $(".d2"+n+"").text([answer2]);
+
+                        var answer3=$('#ta3').val();
+
+				
+                            $(".d3"+n+"").text(answer3);
+		
+
+                        var answer4=$('#ta4').val();
+				
+                            $("#r4"+n+"").val([answer4]);
+                            $(".d4"+n+"").text(answer4);
+
+			
+
+
+                        correct[n]=$("input[name='canswer']:checked").val();
+				
+                          $('.ques,.ans,#btn3,#head2,#break1,#break2').hide();
+			$('#ta4,#ta3,#ta1,#ta2,#ta').val("");
+				alert("you succesfully added your question " + n + " !");
+			
+
+                        });
+                            $('#btn2').click(function(){
+
+                                $('#btn3,#head2,.ans,.ques,.ans,.ques,#break1').show();
+                                $('.h,#btn1,#btn2,#head1,#sans,#que').hide();
+                              });
+                                $('#btn3').click(function(){
+                          var allans=[];
+                          for(var i=1;i<=n;i++)
+                          {
+                          var  res= $("input[name='answer"+i+"']:checked").val();
+                                allans[i]=res;
+
+
+                          }
+
+                          for(var i=1;i<=n;i++){
+                          a+=(allans[i]+" ");
+
+                          }
+                           $('#opt').text(a);
+                                  for(var i=1;i<=n;i++)
+                                      b+=(correct[i]+" ");
+
+                             $('#opt1').text(b);
+
+                             for(var i=1;i<=n;i++){
+                               if(allans[i]==correct[i]){
+                                    score++;
+                               }
+                             }
+                             if(score==n){
+                                  alert('your all answers are correct');
+                                  score=0;
+                                }
+                                  else{
+                                  alert('you score'+score+' out of '+n);
+                                  score=0;
+                                }
+				
+				
+
+                            });
+
+
+
+
+                    });
+
+
+
+    </script>
+      <style media="screen">
+
+        body{
+          font-family: sans-serif;
+          background-color:green;
+          color:white;
+        }
+        .ques{
+              height:100px;
+              width:100%;
+              border-radius:10px;
+              color:black;
+              background:orange;
+              border:2px solid red;
+              }
+              .ans{
+                    height:150px;
+                    width:100%;
+                    border-radius:10px;
+                    color:red;
+                    background:white;;
+                    border:2px solid blue;
+                    }
+
+              #btn1,#btn2,#btn3{
+
+                    height:30px;
+                    width:150px;
+                    background:blue;
+                    color:#fff;
+                    margin-bottom:100px;
+
+              }
+
+              #main{
+                height:500px;
+                width:100%;
+              }
+
+              .r1,.r2,.r3,.r4{
+                float:left;
+              }
+
+
+              #ta,#ta1,#ta2,#ta3,#ta4{
+                      background-color: #fff;
+                      cursor:pointer;
+                      padding:10px;
+              }
+              #ta{
+                margin-left:80px;
+              }
+
+            #r{
+              float:left;
+            }
+            #head1,#head2{
+              width:100%;
+              height:45px;
+              border-radius:15px;
+              border:1px solid yellow;
+              background:red;
+              margin-top:50px;
+              color:black;
+            }
+            #text1{
+              margin-left:80px;
+            }
+
+
+
+      </style>
+
+  </head>
+  <body>
+        <h1 align="center" id="head1">MAKE YOUR OWN QUIZ</h1>
+        <h1 align="center" id="head2">QUIZ</h1>
+        <br>
+        <p id="p1"></p>
+        <div class="ques" id="que">
+
+        </div>
+
+
+      <p id="p2"></p>
+        <div class="ans" id="sans"><br>
+        <form>
+        <input type="radio" class="r1" name="answer" ><div  id="r" class="d1" ></div><br>
+            <input type="radio" class="r2" name="answer"><div  id="r" class="d2"></div><br>
+              <input type="radio" class="r3"  name="answer"><div  id="r" class="d3"></div><br>
+                <input type="radio" class="r4" name="answer"><div id="r" class="d4"></div><br>
+              </form>
+        </div><br>  <p id="p2"></p>
+
+          <center>
+                    <div class="h">
+                      <p id="text1">ENTER YOUR QUESTION HERE:</p> <textarea id="ta" cols=50 rows=6; placeholder="add your question...."></textarea><br><br>
+                        OPTION A: <textarea id="ta1" cols=50 rows=1; placeholder="add your first option...."></textarea><br><br>
+                         OPTION B: <textarea id="ta2" cols=50 rows=1; placeholder="add your second option...."></textarea><br><br>
+                          OPTION C: <textarea id="ta3" cols=50 rows=1; placeholder="add your third option...."></textarea><br><br>
+                            OPTION D: <textarea id="ta4" cols=50 rows=1; placeholder="add your fourth option...."></textarea><br><br>
+                            <p id="opt"></p><br><br>          <!-- for answers answered-->
+                              <p id="opt1"></p><br><br>           <!-- corrrect answers-->
+                            <p>PLEASE SELECT THE CORRECT OPTION FOR THE ABOVE QUESTION</p>
+                          <input type="radio" class="a1" name="canswer" value="a" ><art  id="cr" class="cd1" >A</art><br><br>
+                                <input type="radio" class="a2" name="canswer" value="b"><art  id="cr" class="cd2">B</art><br><br>
+                                  <input type="radio" class="a3"  name="canswer" value="c"><art  id="cr" class="cd3">C</art><br><br>
+                                    <input type="radio" class="a4" name="canswer" value="d"><art id="cr" class="cd4">D</art><br><br>
+                                  </div></center>
+                                  <center>  <button type="button"" id="btn1">ADD QUESTION</button>
+                                           <button type="submit"" id="btn2" class="optbtn">SAVE AND CONTINUE </button>
+                                              <button type="submit"" id="btn3" class="optbtn1">SUBMIT</button></center>
+</html>

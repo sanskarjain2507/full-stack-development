@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+		$(".new").mousedown(function(){
+			$("p").fadeToggle(1000);
+		
+		});
+		$('input').blur(function(){
+			$('input').css("background","red");
+		
+		});
+
+			$('input').keydown(function(){
+			$('input').css("background","yellow");
+		
+		});
+			$('input').select(function(){
+			$('input').css("background","green");
+		
+		});
+		});
+	</script>
+</head>
+<body>
+<button class="new">click</button>
+<input type="text" placeholder="enter text">
+<p>hello</p>
+</body>
+</html>

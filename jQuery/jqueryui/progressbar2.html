@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+
+			var progressbar = $('#progressbar');
+		        var progresslabel=$('.progress-label');
+			progressbar.progressbar({
+
+				value:false,
+				change:function(){
+					progresslabel.text(progressbar.progressbar('value') + "%");	
+				},
+				complete:function(){
+				progresslabel.text("completed");
+				}
+				});	
+			function progress(){
+				var val=progressbar.progressbar('value') || 0;
+				progressbar.progressbar('value',val + 1);
+
+				if(val<99){
+					setTimeout(progress,100);
+				}
+				
+			}
+				
+		setTimeout(progress,1000);
+				
+			
+				
+		});
+
+		
+	</script>
+	<style>
+			
+		body{
+			background:red;
+			
+			}
+		.ui-progressbar{
+			background:green;
+				height:40px;
+				width:100%;
+				position:relative;
+				border-radius:20px;
+				width:80%;
+				margin-left:120px;
+				
+				
+				}
+		.ui-progressbar-value{
+				background:purple;
+				border-radius:20px;
+				
+				}
+		.progress-label{
+				position:absolute;
+				left:47%;
+				top:6px;
+				font-weight:bold;
+				color:#fff;
+				font-size:24px;
+				
+			}
+		
+		
+
+	</style>
+	
+</head>
+
+<body>
+	<div id="progressbar">
+		<div class="progress-label">loading.....</div>
+		</div>
+
+</body>
+</html>

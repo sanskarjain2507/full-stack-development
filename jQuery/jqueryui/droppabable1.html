@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+			$('#name').accordion();
+			$('#name li').draggable({
+
+				appendTo:'body',
+				helper:'clone'
+			})
+			$('#drop ol').droppable({
+				activeClass:"ui-state-default",
+				hoverClass:"ui-state-hover",
+				accept:":not(.ui-sortable-helper)",
+				drop:function(event,ui){
+
+				$(this).find(".placehoder").remove();
+				$('<li></li>').text(ui.draggable.text()).appendTo(this);
+			}
+
+			}).sortable({
+
+			items:"li:not(.placehoder)",
+			sort:function(){
+
+				$(this).removeClass('ui-state-default')				}
+			})
+				
+		});
+
+		
+	</script>
+	<style>
+			
+		body{
+			background:red;
+			
+			}
+		#courses{
+				float:left;
+				width:500px;
+				
+		
+			}
+		#drop{
+
+			width:300px;
+			mardin-top:1em;
+			float:left;
+}
+
+		#drop ol{
+			margin:0;
+			padding:1em 0 1em 3em;
+			
+			
+			}
+	</style>
+
+</head>
+
+<body>
+	<div id="courses">
+			<h1 class="ui-widget-header">courses</h1>
+	<div id="name">
+			<h2><a href="#">web designing</a></h2>
+	<div>
+			<ul>
+			<li>html</li>
+			<li>css</li>
+			<li>bootstrap</li>
+			</ul>
+
+	</div>
+		<h2><a href="#">web developement</a></h2>
+	<div>
+		<ul>
+			<li>javascript</li>
+			<li>php</li>
+			<li>wordpress</li>
+			<li>joomla</li>
+		</ul>
+	</div>
+		<h2><a href="#">projects</h2>
+		<div>
+			<ul>
+				<li>css</li>
+				<li>javascript</li>
+				<li>php</li>
+				<li>others</li>
+			</ul>
+				
+		</div>
+	</div>
+
+		</div>
+	<div id="drop">
+		<h1 class="ui-widget-header">your courses</h1>
+		<div class="ui-widget-content">
+			<ol>		
+				<li>add your couses here</li>
+			</ol>
+		</div>
+	
+
+</body>
+</html>

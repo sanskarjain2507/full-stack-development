@@ -1,0 +1,45 @@
+<html>
+	<head>
+	<title></title>
+	
+	</head>
+	<body>
+	
+	<script type="text/javascript">
+	var mymove
+	function openwin()
+		{
+		mymove=window.open("","mymove","width=200,height=200");
+		mymove.document.write("this is window");
+				
+
+	      }
+
+		function resizewin() {
+
+		mymove.resizeBy(150,78);
+		mymove.focus();
+
+		}
+		function resizeto() {
+
+		mymove.resizeTo(150,78);
+		mymove.focus();
+
+		}
+	
+		
+	</script>
+		
+	<button onclick="openwin();">click</button>
+	<button onclick="resizewin();">click</button>
+	<button onclick="resizeto();">click</button>
+	
+	
+	<br>
+	<p id="cde">hello</p>
+	<p id="ce"></p>
+	
+	
+	</body>
+</html>

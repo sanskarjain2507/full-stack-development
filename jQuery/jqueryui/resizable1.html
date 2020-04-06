@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+				
+				$('#resize').resizable({
+					
+				handles:'all',
+				autoHide:true,
+				animate:true,
+				ghost:true,
+				animateDuration:400,
+				animateEasing:'linear'
+
+
+
+				
+
+				});
+				
+		});
+
+		
+	</script>
+	<style>
+			
+		body{
+			background:white;
+			
+			}
+
+		#resize{
+			width:500px;
+			height:400px;
+
+			}
+		img{
+			height:120px;
+			width:460px;
+			}
+		#main{
+			text-align:center;
+			}
+		
+	</style>
+
+</head>
+
+<body>
+	<div id="resize" class="ui-widget-header">
+		<div id="main">
+		<img src="logo.jpg" alt="" class="ui-widget-content">
+		</div>
+	</div>
+	
+
+</body>
+</html>

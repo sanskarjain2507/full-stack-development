@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+			
+			$('#draggable').draggable();
+				$('#droppable').droppable({
+				drop:function(event,ui){
+						
+
+				$(this).addClass('ui-state-highlight').find('p').html('<h3>dropped</h3>');
+				},
+				tolerance:'fit' ,          //or tolerance:touch.....
+					
+				})
+			
+				
+		});
+
+		
+	</script>
+	<style>
+			
+		body{
+			background:red;
+			
+			}
+		#draggable{
+			height:80px;
+			width:320px;
+			}
+		#droppable{
+
+			width:700px;
+			height:400px;
+			
+			}
+		
+		
+		
+
+	</style>
+	
+</head>
+
+<body>
+	<img src="logo.jpg" alt="" id="draggable" class="ui-widget-content">
+		<div id="droppable" class="ui-widget-header">
+				
+		<p id="drop">drop here</p>
+		</div>
+
+</body>
+</html>

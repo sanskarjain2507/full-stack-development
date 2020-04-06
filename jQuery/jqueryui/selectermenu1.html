@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+			$('#menu').selectmenu({
+				icons:{button:'ui-icon-circle-plus'}
+			
+				});
+		});
+
+		
+	</script>
+	<style>
+		body{
+			background:red;
+			
+			}
+		
+		
+
+	</style>
+	
+</head>
+
+<body>
+	<select name="" id="menu">
+			<optgroup label="webdesigning">
+			<option value="html">html</option>
+			<option value="css">css</option>
+			<option value="jquery">jquery</option>
+			</optgroup>
+			<optgroup label="webdevelopement">
+			<option value="json">json</option>
+			</optgroup>
+	</select>
+
+</body>
+</html>

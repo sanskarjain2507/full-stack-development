@@ -1,0 +1,35 @@
+<html>
+	<head>
+	<title></title>
+	</head>
+	<body>
+	<script type="text/javascript">
+	function abc()
+		{
+		var x=window.length;
+
+		document.getElementById("cde").innerHTML=x;
+		var z=window.open("","","height=500,width=600");
+				
+		z.document.write(" new window");
+		z.blur();
+	      }
+	function ab()
+		{
+		var u=window.open("","","height=500,width=600");
+		u.focus();
+		
+		var y=window.name;
+		document.getElementById("ce").innerHTML=y;
+		}
+	</script>
+		
+	<button onclick="abc();">click</button>
+	<button onclick="ab();">click1</button>
+	<br>
+	<p id="cde"></p>
+	<p id="ce"></p>
+	
+	
+	</body>
+</html>

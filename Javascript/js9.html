@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript global versus function scope</title>
+	<script type="text/javascript">
+	if(true)
+	{
+	var x=5;
+	}
+	
+	alert(x);
+
+	myscope="global";
+
+(function()	{
+	if(true)
+	{
+	var myscope="function";
+	}
+	//var myscope="function";
+	//myscope="inside the function"; // changing value of global variable
+	alert('inside function'+ myscope);
+	})(); 
+	alert("outside function" + myscope);
+
+	alert("window.myscope" + window.myscope); //DOM
+	</script>
+</head>
+<body>
+	<h1>javascript global versus function scope</h1>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript  loops</title>
+	<script type="text/javascript">
+	var playlist=[];
+	playlist[0]="one for the team";
+	playlist[1]="hello";
+	playlist[2]="sanskar";
+	playlist[3]="jain";
+	
+	// while
+	var i=0;
+	while(i<playlist.length) {
+	document.write("<br/>now playing" + playlist[i]);
+	i++;
+	}
+
+
+	// do-while
+	var someresult=false;
+	do{
+		document.write("will print at least once");
+	
+}
+	while(someresult)
+
+ 	// for
+
+	for(i=0;i<playlist.length;i++)
+	document.write("<br/>"+playlist[i]);
+
+	// for... in
+	for(i in playlist)
+	document.write("<br/>"+playlist[i]); 
+	</script>
+</head>
+<body>
+	<h1>javascript loops</h1>
+</body>
+</html>

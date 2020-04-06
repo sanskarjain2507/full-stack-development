@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+	
+			$('#sortable,#course').sortable({
+				revert:true,
+				opacity:0.5,
+				delay:200,
+				tolerance:'pointer',
+				connectWith:'#course,#sortable',
+				cursor:'pointer',
+				update: function(){
+
+				alert('updated');
+				}
+				
+				
+				
+		
+			})
+
+			
+				
+				
+	});
+
+		
+	</script>
+	<style>
+			
+		body{
+			background:red;
+			
+			}
+		img{
+			height:80px;
+			width:320px;
+			}
+		#sortable,#course{
+			list-style:none;
+			margin:0;
+			padding:0;
+			width:220px;
+		}
+		#sortable li,#course li{
+			margin:5px;
+			padding:6px;
+			font-size:30px;
+			height:50px;
+			line-height:50px;
+			color:black;
+			border-radius:10px;
+			
+			}
+		div{
+			display:inline-block;
+		}
+		
+
+		
+		
+	</style>
+
+</head>
+
+<body>
+	<div>
+	<ul id="sortable">
+		
+		<li class="ui-widget-header">html</li>
+		<li class="ui-widget-header">css</li>
+		<li class="ui-widget-header">javascript</li>
+		<li class="ui-widget-header">php</li>
+		<li class="ui-widget-header">sql</li>
+		<li class="ui-widget-header">wordpress</li>
+		<li class="ui-widget-header">photoshop</li>
+	</ul>
+	</div>
+	<div>
+	<ul id="course">
+		
+		<li class="ui-widget-header">designing</li>
+		<li class="ui-widget-header">developement</li>
+		<li class="ui-widget-header">graphics</li>
+		<li class="ui-widget-header">others</li>
+		
+	</ul>
+	<div>
+		
+
+</body>
+</html>

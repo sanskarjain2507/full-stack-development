@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+		$('#btn').click(function(){
+			$('div').each(function(){
+			alert($(this).text().length);
+			});
+			});
+		
+			});
+			
+	</script>
+	
+</head>
+<body>
+
+<button id="btn">each</button>
+
+<div>hello</div>
+<div>hello1</div>
+<div>hello</div>
+	
+
+
+
+
+</body>
+</html>

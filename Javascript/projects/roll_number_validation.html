@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Roll number validation</title>
+	</head>
+	<body>
+	<h1 align="center">ROLL NUMBER VALIDATION</h1><br><br>
+	<center>
+	<form method="get" onsubmit="return rollno()">
+	Enter your roll number:<input type="text" id="textbox"><br><br>
+	<button type="submit">click here</button><br><br>
+	</form>
+	</center>	
+
+	<script type="text/javascript">
+		function rollno(){
+			var text=document.getElementById("textbox").value;	
+			
+			var patt=/^[1-4]{1}[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}$/;
+			var test=patt.test(text);
+		
+			 
+			
+			if(test==false)
+			{
+			alert("please enter the valid roll number");
+			
+			}
+			else 
+			
+			return true;
+			
+			}
+		
+			
+	</script>
+
+	
+	</body>
+</html>

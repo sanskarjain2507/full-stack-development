@@ -1,0 +1,48 @@
+<html>
+	<head>
+	<title></title>
+	
+	</head>
+	<body>
+	<script type="text/javascript">
+		var c=5;
+		var t;
+		var x=setInterval(function(){mytime},1000);
+		function mytime()	
+		{
+		var a=new Date();
+		document.getElementById("sd").innerHTML=a.toLocaleTimeString();
+		}
+		
+		function new_time()
+		{
+			document.getElementById("ef").innerHTML=c;
+			c--;
+
+			if(c<=1)
+			{
+			clearInterval(t);
+			document.getElementById("ef").innerHTML="click to download";
+
+			}
+		}
+		t=setInterval(new_time,1000);
+		function cde()
+		{
+		
+			document.getElementById("mn").innerHtml=alert("hello world");
+
+		}
+
+	</script>
+	<br>
+	
+	<button onclick="setInterval('mytime()',1000);">start</button>
+	<p id="mn"></p>
+	<button onclick="setTimeout('cde()',1000);">set time out</button>
+	
+	
+	<p id="sd"></p>
+	<p id="ef"></p>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+	<head>
+	<title></title>
+	</head>
+	<body>
+	<script type="text/javascript">
+	var mywindow;
+	function openwin() {
+  			mywindow=window.open(" ","mywindow","width=400,height=300");
+	}
+	
+	function closewin() {
+			if(mywindow)
+  			mywindow.close();
+	}	
+
+	function checkwin()
+	{
+			if(!mywindow)
+			{
+			document.getElementById("abc").innerHTML="you have not opened a window";
+			}
+		else
+		{
+		if(mywindow.closed)
+		document.getElementById("abc").innerHTML="window has been closed";
+		else
+		document.getElementById("abc").innerHTML="window has not been closed";
+		
+		}
+	}
+	</script>
+	<button onclick="openwin();">click</button>
+	<button onclick="closewin();">click1</button>
+	<button onclick="checkwin();">click2</button>
+	<p id="abc"></p>
+	</body>
+	</html>

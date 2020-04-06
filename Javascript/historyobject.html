@@ -1,0 +1,35 @@
+<html>
+	<head>
+	<title></title>
+	
+	</head>
+	<body>
+	<script type="text/javascript">
+		document.write(window.history.length);
+		
+	function forward_a()
+		{
+		document.write(window.history.forward());
+		}
+	
+		function back_a()
+		{
+		document.write(window.history.back());
+		}
+
+		function go_a()
+		{
+		document.write(window.history.go());
+		}
+	
+	</script>
+	<br>
+	<button onclick="forward_a();">forward</button>
+	<button onclick="back_a();">back</button>
+	<button onclick="go_a(-1);">go to first page</button>
+	<button onclick="go_a(+1);">go to last page</button>
+	<button onclick="go_a(-2);">go to foward second page page</button>
+	<button onclick="go_a(+2);">go to   last second page</button>
+	<p id="cde"></p>
+	</body>
+</html>

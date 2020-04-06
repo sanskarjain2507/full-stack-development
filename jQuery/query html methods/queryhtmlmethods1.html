@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+		$('#btn1').click(function(){
+			
+
+			$('p').remove();
+			});
+			
+		$('#btn2').click(function(){
+			
+
+			$('p').detach();
+			});
+			
+		$('#btn3').click(function(){
+			
+
+			$('p').empty();
+			});
+			
+			
+	
+			
+			
+			});
+			
+	</script>
+	
+	
+		
+	
+</head>
+<body>
+
+
+	<button id="btn1">remove</button>
+	<button id="btn2">detach</button>
+	<button id="btn3">empty</button>
+	
+	<p id="p1">hello</p>
+	<p id="p2" style="border:1px solid green">hello</p>
+	
+	<div>hi</div>
+
+
+
+</body>
+</html>

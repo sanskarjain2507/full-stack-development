@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>vowel finding</title>
+	</head>
+	<body>
+		<center><h1 align="center">VOWEL FINDER</h1>
+		<br><br>
+		<button type="button" id="button">click me to enter string</button>
+		<p id="para"></p>
+		</center>
+		<script type="text/javascript">
+		var str;
+		document.getElementById("button").onclick= function(){
+		str=prompt("enter any string");
+		var len=str.length;
+		vowel();
+		function vowel()
+	{
+		for(var i=0;i<=(len-1);i++)
+		{ 	
+		  if(str[i]=='a' || str[i]=='A' || str[i]=='e' || str[i]=='E' || str[i]=='i' || str[i]=='I' || str[i]=='o' || str[i]=='O' || str[i]=='U' || str[i]=='u' ) 
+		{
+				var j=i+1;
+			alert("position of leftmost  vowel is "+j);
+			break;
+	}
+		}
+		}
+	}
+		</script>
+		
+		
+	</body>
+</html>

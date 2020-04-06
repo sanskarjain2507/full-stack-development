@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dropdown menu</title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.drop ul li').hover(function(){
+				$(this).find('ul').stop().slideToggle(300);
+			})
+		
+		
+			});
+			
+	</script>
+	<style>
+		body{
+			background:#e2e2e2;
+			}
+		.drop{
+			margin-top:50px;
+			background:#425F9C;
+			border-radius:10px;
+			margin:0px auto;}
+
+		.drop ul{
+			margin:0;
+			padding:0;
+			list-style:none;
+			text-align:center;
+			position:relative;
+			}
+		
+		.drop ul li{
+			display:inline-block;
+			}
+		.drop ul li a{
+				display :block;
+				height:45px;
+				width:170px;
+				color:#fff;
+				font-family:helvatica;	
+				line-height:45px;
+				text-decoration:none;
+				}
+		.drop ul li a:hover{
+				background:#31363A;
+				color:#fff;
+				border-radius:15px;
+				}
+		.drop ul ul{
+				position:absolute;
+				display:none;
+			}
+		.drop ul ul li{
+				display:block;
+				background:#227744;
+				}
+		.drop ul ul li a:hover{
+				background:#E81810;
+				color:#fff;
+				border-radius:15px;
+				padding-left:10px;
+
+					}
+		.drop ul li img{
+				vertical-align:middle;
+				padding-left:10px;
+				width:26px;
+				height:26px;	
+			}
+		</style>
+</head>
+<body>
+	<nav class="drop">	
+		<ul>
+			<li><a href="#">home</a></li>
+			<li><a href="#">designing <img src="down.gif" alt=""></a>
+				<ul>
+					<li><a href="#">HTML</a></li>
+					<li><a href="#">javascript</a></li>
+					<li><a href="#">CSS</a></li>
+					<li><a href="#">bootstrap</a></li>
+
+				</ul>
+			</li>
+			<li><a href="#">Developement <img src="down.gif" alt=""></a>
+				<ul>
+					<li><a href="#">javascript</a></li>
+					<li><a href="#">PHP &amp; SQL</a></li>
+					<li><a href="#">wordpress</a></li>
+					<li><a href="#">joomla</a></li>
+				</ul>
+			</li>
+			<li><a href="#">graphics</a></li>
+			<li><a href="#">projects</a></li>
+			<li><a href="#">about</a></li>
+			<li><a href="#">content</a></li>
+		</ul>
+
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+
+       <title>my site</title>
+  </head>
+  <body>
+   <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">textabc.com</a>
+  <form class="form-inline">
+      <ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Home</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">help</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">About us</a>
+      <a class="dropdown-item" href="#">Contact us</a>
+      <a class="dropdown-item" href="#">Provide feedback</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+   </nav>
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Hello sanskar!</strong> You are ready to use our site.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+  <div class="container">
+     <form action="\analyze" method="post"> {% csrf_token %}<!--csrf_token is used
+     for security purpose .for example in url if someone amake facebook/deleteaccount in action of submit button
+     then user facebook account would be deleted by clicking on analyze button
+     to prevent this we use csrf token-->
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Enter your text here to analyze</label>
+    <textarea class="form-control" name='ta1' id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+
+      <div class="custom-control custom-switch">
+  <input type="checkbox"  name="removepunc" class="custom-control-input" id="customSwitch1">
+  <label class="custom-control-label" for="customSwitch1">Remove punctuations</label>
+</div>
+
+      <div class="custom-control custom-switch">
+  <input type="checkbox" name="fullcaps" class="custom-control-input" id="customSwitch2">
+  <label class="custom-control-label" for="customSwitch2">Change to uppercase</label>
+</div>
+
+      <div class="custom-control custom-switch">
+  <input type="checkbox" name="newlineremover" class="custom-control-input" id="customSwitch3">
+  <label class="custom-control-label" for="customSwitch3">Remove new lines</label>
+</div>
+
+      <div class="custom-control custom-switch">
+  <input type="checkbox" name="spaceremover" class="custom-control-input" id="customSwitch4">
+  <label class="custom-control-label" for="customSwitch4">Remove spaces</label>
+</div>
+
+      <button type="submit" class="btn btn-info">Analyze your text</button>
+     </form>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+		$('#btn1').click(function(){
+			
+
+			
+			$('ol').append('<li>new item</li>');
+		
+			});
+		
+				$('#btn2').click(function(){
+			
+
+			
+			$('<li>new item</li>').appendTo('ol');
+		
+			});
+		
+			
+		
+			
+			
+	
+			
+			
+			});
+			
+	</script>
+	
+	
+	<style>
+		div{
+			width:100px;
+			height:100px;
+			background-color:yellow;
+			border:2px solid green;
+			border-radius:10px;
+	
+			}
+	</style>
+	
+</head>
+<body>
+
+
+	<button id="btn1">click</button><br>
+	<button id="btn2">click</button><br>
+	
+	<ol>
+		<li>one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+	</ol>
+	
+	<div>hi</div>
+	<div>hi</div>
+
+	<div>hi</div>
+
+
+
+
+</body>
+</html>

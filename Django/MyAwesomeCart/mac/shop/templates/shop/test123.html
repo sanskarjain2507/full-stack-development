@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tests</title>
+</head>
+<body>
+{%for i in lists%}
+{{forloop.counter}}
+{{lists|length}}
+{%if forloop.counter == 2 %}
+sanskar {{i}}
+{%endif%}
+{% endfor %}
+</body>
+</html>

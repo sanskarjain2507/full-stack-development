@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>	NAVIGATION BAR</title>
+
+	<style>
+		
+		*{margin:0;padding:0;}
+		
+		nav{
+		       
+		       margin-left:250px;
+		       position:absolute;
+		       }
+		
+		.c1{
+			list-style-type:none;
+			line-height:50px;
+			text-align:center;
+		   
+		    
+			}
+
+		nav ul li{
+			width:80px;
+			height:40px;
+			background-color:orange;
+			border:1px solid black;
+			float:left;
+			border-radius:6px;
+		   text-decoration: underline;
+		   opacity:0.7;
+		    font-size:50%;
+			}
+
+		nav ul li:hover{
+			background-color:red;
+				}
+		
+		.c2{
+			display:none;
+		    list-style-type:none;
+		    
+			}
+		
+		nav ul li:hover >ul{
+			display:block;
+				}
+		
+		   img{
+		           margin-left:250px;
+		           margin-right:50px;
+		}
+		
+		body{
+		          height:600px;
+		          width:1000px;
+		      
+		}
+		
+	</style>
+	</head>
+	<body>
+		<h1 align="center"><u>EXPERIMENT 8:NAVIGATION BARS</u><h1>
+		<br><br>
+			
+      <h1 align="center"><u>Institution website</u></h1>
+		<br><br>
+	<nav>
+	<ul class="c1">
+		<li>home</li>
+		<li>academic
+		<ul class="c2">
+		<li>home</li>
+		<li>academic</li>
+		<li>about</li>
+		<li>contact us</li>
+		</ul></li>
+		<li>about</li>
+		<li>contact us</li>
+	</ul>
+	</nav>
+				 <img src="institution.jpg" height="200"  width="500">  
+
+
+	
+	</body>
+</html>

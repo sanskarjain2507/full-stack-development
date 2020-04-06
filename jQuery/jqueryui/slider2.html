@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel='stylesheet' href="jquery-ui.css">
+	<script src='jquery.js'></script>
+	<script src='jquery-ui.js'></script>
+	<script>
+		
+		
+		$(document).ready(function(){
+			$('#slider').slider({min:5,max:500,step:10,
+			range:true,
+			values:[100,300],
+			slide: function(event,ui){
+			$('#price').html('&#x20B9;'+ui.values[0] + '&#x20B9;'+ui.values[1] );
+			
+			}
+		
+			});
+		 
+
+		});
+
+		
+	</script>
+	<style>
+		body{
+			background:red;
+			
+			}
+		.ui-slider{
+			background:purple;
+			}
+		
+
+
+	</style>
+	
+</head>
+
+<body>
+	<div id="slider"></div>
+	<div id="price"></div>
+</body>
+</html>

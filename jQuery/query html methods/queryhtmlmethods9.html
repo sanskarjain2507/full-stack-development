@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+		
+		$('#btn1').click(function(){
+			
+		alert('the width is ' + $('div').width());
+		
+				
+			});
+		$('#btn2').click(function(){
+			
+		alert('the width is ' + $('div').innerWidth());
+		
+				
+			});
+		$('#btn3').click(function(){
+			
+		alert('the width is ' + $('div').outerWidth());
+		
+				
+			});
+			});
+			
+	</script>
+	
+	
+	<style>
+		div{
+			width:150px;
+			height:200px;
+			background-color:navy;
+			border:2px solid green;
+			border-radius:10px;
+			padding:10px;
+			}
+	</style>
+	
+</head>
+<body>
+
+
+	<button id="btn1">click</button><br>
+	<button id="btn2">click</button><br>
+	<button id="btn3">click</button><br>
+	
+	<p>hello</p>
+	
+	<div>hi</div>
+	
+
+
+
+
+</body>
+</html>
